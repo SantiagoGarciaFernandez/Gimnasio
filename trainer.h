@@ -1,0 +1,32 @@
+#ifndef TRAINER_H
+#define TRAINER_H
+
+#include <string>
+#include "Member.h"
+
+class Trainer {
+private:
+    std::string name;
+    std::string specialty;
+    int yearsExperience;
+
+public:
+    // Constructor
+    Trainer(const std::string &name, const std::string &specialty, int yearsExperience);
+
+    // Getters
+    std::string getName() const;
+    std::string getSpecialty() const;
+    int getYearsExperience() const;
+
+    // Setters
+    void setName(const std::string &name);
+    void setSpecialty(const std::string &specialty);
+    void setYearsExperience(int yearsExperience);
+
+    // Otros métodos
+    std::string getProfile() const;
+    std::string assignRoutine(const Member &member, const std::string &routineName) const;
+};
+
+#endif // TRAINER_H
