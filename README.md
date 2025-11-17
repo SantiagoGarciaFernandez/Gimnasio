@@ -1,7 +1,5 @@
 # Gimnasio
 
-# Gym – Gestor sencillo de un gimnasio
-
 ## Descripción del problema
 
 En un gimnasio es necesario llevar un control básico de las personas que entrenan, 
