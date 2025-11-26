@@ -1,11 +1,8 @@
 #include "Member.h"
+#include <string>
 
 Member::Member(const std::string &name, int id, const std::string &level)
-    : name(name), id(id), level(level) {}
-
-std::string Member::getName() const {
-    return name;
-}
+    : Person(name), id(id), level(level) {}
 
 int Member::getId() const {
     return id;
@@ -13,10 +10,6 @@ int Member::getId() const {
 
 std::string Member::getLevel() const {
     return level;
-}
-
-void Member::setName(const std::string &name) {
-    this->name = name;
 }
 
 void Member::setId(int id) {

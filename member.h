@@ -2,24 +2,22 @@
 #define MEMBER_H
 
 #include <string>
+#include "Person.h"
 
-class Member {
+class Member : public Person {
 private:
-    std::string name;
     int id;
-    std::string level; // por ejemplo: "Principiante", "Intermedio", "Avanzado"
+    std::string level; // "Principiante", "Intermedio", "Avanzado"
 
 public:
     // Constructor
     Member(const std::string &name, int id, const std::string &level);
 
     // Getters
-    std::string getName() const;
     int getId() const;
     std::string getLevel() const;
 
     // Setters
-    void setName(const std::string &name);
     void setId(int id);
     void setLevel(const std::string &level);
 

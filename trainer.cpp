@@ -1,11 +1,7 @@
 #include "Trainer.h"
 
 Trainer::Trainer(const std::string &name, const std::string &specialty, int yearsExperience)
-    : name(name), specialty(specialty), yearsExperience(yearsExperience) {}
-
-std::string Trainer::getName() const {
-    return name;
-}
+    : Person(name), specialty(specialty), yearsExperience(yearsExperience) {}
 
 std::string Trainer::getSpecialty() const {
     return specialty;
@@ -13,10 +9,6 @@ std::string Trainer::getSpecialty() const {
 
 int Trainer::getYearsExperience() const {
     return yearsExperience;
-}
-
-void Trainer::setName(const std::string &name) {
-    this->name = name;
 }
 
 void Trainer::setSpecialty(const std::string &specialty) {

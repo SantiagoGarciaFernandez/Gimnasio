@@ -2,8 +2,12 @@
 #include "Exercise.h"
 #include "Member.h"
 #include "Trainer.h"
+#include "Gym.h"
 
 int main() {
+    // Crear gimnasio
+    Gym gym("POO Gym");
+
     // Crear un ejercicio
     Exercise exercise("Bench press", 4, 10, 60.0);
 
@@ -13,11 +17,15 @@ int main() {
     // Crear un entrenador
     Trainer trainer("Luis Pérez", "Hipertrofia", 5);
 
-    // Mostrar información inicial
+    // Agregar al gimnasio
+    gym.addExercise(exercise);
+    gym.addMember(member);
+    gym.addTrainer(trainer);
+
     std::cout << "=== Información inicial ===\n";
-    std::cout << exercise.getDescription() << std::endl;
-    std::cout << member.getInfo() << std::endl;
-    std::cout << trainer.getProfile() << std::endl;
+    gym.showExercises();
+    gym.showMembers();
+    gym.showTrainers();
 
     // Probar métodos de modificación
     std::cout << "\n=== Modificando datos ===\n";

@@ -2,11 +2,11 @@
 #define TRAINER_H
 
 #include <string>
+#include "Person.h"
 #include "Member.h"
 
-class Trainer {
+class Trainer : public Person {
 private:
-    std::string name;
     std::string specialty;
     int yearsExperience;
 
@@ -15,12 +15,10 @@ public:
     Trainer(const std::string &name, const std::string &specialty, int yearsExperience);
 
     // Getters
-    std::string getName() const;
     std::string getSpecialty() const;
     int getYearsExperience() const;
 
     // Setters
-    void setName(const std::string &name);
     void setSpecialty(const std::string &specialty);
     void setYearsExperience(int yearsExperience);
 
